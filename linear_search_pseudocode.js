@@ -17,3 +17,7 @@ function linearSearchPseudocode(arr, val){
 
     return -1
 }
+
+// O(n)
+
+// Linear Search Big O: O(1)=Best O(n)=Average O(n)=Worst
