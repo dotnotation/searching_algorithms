@@ -61,3 +61,5 @@ function binarySearchPseudocode(arr, elem){
     }
     return arr[middle] === elem ? middle : -1
 }
+
+// best case O(1), worst/average O(log n)
