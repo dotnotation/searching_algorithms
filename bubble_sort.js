@@ -25,7 +25,7 @@ function bubbleSort(arr){
 
 bubbleSort([37, 45, 29, 8])
 
-// optimized solution
+// somewhat optimized solution
 function bubbleSort(arr){
     for (let i = arr.length; i > 0; i--){
         // starts at the end of the array towards the beginning
@@ -42,4 +42,11 @@ function bubbleSort(arr){
         }
     }
     return arr
+}
+
+// optimized solution
+function bubbleSort(arr){
+    // in the last solution even though we were running the loop for a shorter period each loop
+    // it would still run until every loop was completed even if all the times were sorted
+    // now we want to stop the loop if nothing is swapped on the last run
 }
