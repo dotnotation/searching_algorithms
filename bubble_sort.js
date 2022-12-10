@@ -6,6 +6,18 @@
 // if it is larger, more it towards the back 
 // nested loop that is depending on the first loop 
 
-function bubbleSort(){
+function bubbleSort(arr){
+
+    for (let i = 0; i < arr.length; i++){
+        for (let j = 0; j > arr[i - 1]; j++){
+            if (arr[j] > arr[j + 1]){
+                var temp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = temp
+            }
+        }
+
+        return arr
+    }
 
 }
