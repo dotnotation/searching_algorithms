@@ -49,4 +49,21 @@ function bubbleSort(arr){
     // in the last solution even though we were running the loop for a shorter period each loop
     // it would still run until every loop was completed even if all the times were sorted
     // now we want to stop the loop if nothing is swapped on the last run
+    let noSwaps
+    for (let i = arr.length; i > 0; i--){
+        noSwaps = true
+        for (let j = 0; j < i - 1; j++){
+            if (arr[j] > arr[j + 1]){
+                let temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+                noSwaps = false
+            }
+        }
+        if (noSwaps) break
+    }
+    return arr
 }
+
+// Time: O(n) when optimized and nearly sorted 
+// and O(n^2) when data isn't nearly sorted
