@@ -6,6 +6,7 @@
 // if it is larger, more it towards the back 
 // nested loop that is depending on the first loop 
 
+// naive solution
 function bubbleSort(arr){
 
     for (let i = 0; i < arr.length; i++){
@@ -23,3 +24,22 @@ function bubbleSort(arr){
 }
 
 bubbleSort([37, 45, 29, 8])
+
+// optimized solution
+function bubbleSort(arr){
+    for (let i = arr.length; i > 0; i--){
+        // starts at the end of the array towards the beginning
+        // this allows us to use the variable i in our definition of the j loop
+        // the first time through this loop will bubble the largest number to the back of the array
+        for (let j = 0; j < i - 1; j++){
+            // j < i - 1 means that we will run one less loop every time we iterate
+            // as the largest number is already at the back of the array, we don't need to check it again
+            if (arr[j] > arr[j + 1]){
+                let temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+            }
+        }
+    }
+    return arr
+}
