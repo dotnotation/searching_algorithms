@@ -42,3 +42,6 @@ function selectionSort(arr){
 
     return arr
 }
+
+// Big O:
+    // Time: O(n^2)
