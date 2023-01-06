@@ -31,3 +31,4 @@ Selection Sort:
         - you are saving the index, not the value, so you can swap
         - if you find a new smaller number, designate it to be the new minimum and continue until the end of the array
         - if the minimum is not the value/index you initially began with, swap the two values
+        - shrink the scope as you loop through 
