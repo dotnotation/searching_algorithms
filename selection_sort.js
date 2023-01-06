@@ -5,12 +5,40 @@
 // repeat until all items are sorted in the array
 
 function selectionSort(arr){
-    let min = arr[0]
-    let result = []
 
     for (let i = 0; i < arr.length; i++){
-        if (min > arr[i]){
-            min = i
+        let min = i
+        for (let j = i + 1; j < arr.length; j++){
+            if (arr[j] < arr[min]){
+                min = j
+            }
+        }
+        // swap only if you need to
+        if (i !== min){
+            let temp = arr[i]
+            arr[i] = arr[min]
+            arr[min] = temp
         }
     }
+
+    return arr
+}
+
+// other solution
+function selectionSort(arr){
+    const swap = (arr, idx1, idx2) => 
+        ([arr[idx1]], arr[idx2]) = [arr[idx2], arr[idx1]]
+
+    for (let i = 0; i < arr.length; i++){
+        let min = i
+        for (let j = i + 1; j < arr.length; j++){
+            if (arr[j] < arr[min]){
+                min = j
+            }
+        }
+        // swap only if you need to
+        if (i !== min) swap(arr, i, min)
+    }
+
+    return arr
 }
