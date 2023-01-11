@@ -15,8 +15,9 @@
 function insertionSort(arr){
     for (let i = 1; i < arr.length; i++){
         let current = arr[i]
-        for (let j = i - 1; j >= 0; j--){
-            arr[j] > current
+        for (let j = i - 1; j >= 0 && arr[j] > current; j--){
+            // add conditional in for loop so that the loop will stop if the element is greater than current
+            
         }
     }
     return arr
