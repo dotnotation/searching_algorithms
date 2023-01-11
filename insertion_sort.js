@@ -17,8 +17,14 @@ function insertionSort(arr){
         let current = arr[i]
         for (let j = i - 1; j >= 0 && arr[j] > current; j--){
             // add conditional in for loop so that the loop will stop if the element is greater than current
-            
+            arr[j + 1] = arr[j]
+            // this will move the value forward in the sorted portion
         }
+        // once the position is found, you want to insert the current into the position in front of the element that stopped the loop
+        arr[j + 1] = current
     }
     return arr
 }
+
+// Big O
+    // Time: O(n^2) (worst case)
