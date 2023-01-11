@@ -32,3 +32,12 @@ Selection Sort:
         - if you find a new smaller number, designate it to be the new minimum and continue until the end of the array
         - if the minimum is not the value/index you initially began with, swap the two values
         - shrink the scope as you loop through 
+
+Insertion Sort:
+    - builds up the sort by gradually creating a larger left half which is always sorted
+        - gradually sorting the array by inserting the number into the right place from left to right 
+    - start by picking the second element in the array
+        - compare the second element with the one before it and swap if necessary
+        - continue to the next element and if it is in the incorrect order, iterate through the sorted portion (the left side)
+        - place the element in the correct place in the sorted portion
+        - return the sorted array
