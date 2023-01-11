@@ -67,3 +67,4 @@ function bubbleSort(arr){
 
 // Time: O(n) when optimized and nearly sorted 
 // and O(n^2) when data isn't nearly sorted
+// Space: O(1)

@@ -28,3 +28,4 @@ function insertionSort(arr){
 
 // Big O
     // Time: O(n^2) (worst case)
+    // Space: O(1)
