@@ -19,6 +19,7 @@ Bubble Sort:
     - sorting algorithm where the largest values bubble up to the top
     - compares two adjacent elements, the larger value get pushed towards the top or back of the array
     - swapping values 
+    - good for almost sorted data
     - Big O
         - Time: O(n^2)
         - Space: O(1)
@@ -47,6 +48,7 @@ Insertion Sort:
         - continue to the next element and if it is in the incorrect order, iterate through the sorted portion (the left side)
         - place the element in the correct place in the sorted portion
         - return the sorted array
+    - good for almost sorted data
     - Big O
         - Time: O(n^2)
         - Space: O(1)
