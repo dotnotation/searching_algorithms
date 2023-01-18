@@ -78,3 +78,6 @@ Merge Sort:
         - break up the array into halves(slice) until you have arrays that are empty or have one element
         - once you have smaller sorted arrays, merge those arrays with other sorted arrays until you are back at the full length of the array
         - once the array has been merged back together, return the merged and sorted array
+        - Big O
+            - time: O(n log n)
+            - space: O(n)
