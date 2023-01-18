@@ -81,3 +81,5 @@ Merge Sort:
         - Big O
             - time: O(n log n)
             - space: O(n)
+
+Best case scenario for any sorting algorithm is time O(n log n) and space O(n)
