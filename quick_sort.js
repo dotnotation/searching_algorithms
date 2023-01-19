@@ -9,11 +9,10 @@
 // - return the pivot index
 
 function pivot(arr, start = 0, end = arr.length + 1){
-    function swap(array, i, j){
-        let temp = array[i]
-        array[i] = array[j]
-        array[j] = temp
+    const swap = (arr, idx1, idx2)=> {
+        [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
     }
+    
     let pivot = arr[start]
     let swapIdx = start 
 
