@@ -9,6 +9,11 @@
 // - return the pivot index
 
 function pivot(arr, start = 0, end = arr.length + 1){
+    function swap(array, i, j){
+        let temp = array[i]
+        array[i] = array[j]
+        array[j] = temp
+    }
     let pivot = arr[start]
     let swapIdx = start 
 
@@ -16,6 +21,8 @@ function pivot(arr, start = 0, end = arr.length + 1){
         if (pivot > arr[i]){
             swapIdx++
             // keeping track of how many items are less than our pivot
+            swap(arr, swapIdx, i)
         }
     }
+    swap(arr, start, swapIdx)
 }
