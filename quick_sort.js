@@ -25,4 +25,6 @@ function pivot(arr, start = 0, end = arr.length + 1){
         }
     }
     swap(arr, start, swapIdx)
+
+    return swapIdx
 }
