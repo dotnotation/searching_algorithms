@@ -78,8 +78,21 @@ Merge Sort:
         - break up the array into halves(slice) until you have arrays that are empty or have one element
         - once you have smaller sorted arrays, merge those arrays with other sorted arrays until you are back at the full length of the array
         - once the array has been merged back together, return the merged and sorted array
-        - Big O
-            - time: O(n log n)
-            - space: O(n)
+        - recursive call
+    - Big O
+        - time: O(n log n)
+        - space: O(n)
+
+Quick Sort:
+    - exploits the fact that arrays of 0 or 1 element are always sorted
+	    - just like merge sort
+    - Pivot
+        - works by selecting one element, the pivot, and finding the index where the pivot should end up in the sorted array
+        - so any number that is less than the pivot are moved to the left and any number greater moves to the right 
+            - although it is not sorted besides being on the correct side of the pivot
+            - then you have to repeat the process with the left and right side
+        - there will be a variable that will store the number of elements that are less than the pivot which will gives us the index of where the pivot should be moved/swapped
+            - keep in mind that the pivot isn't being swapped until the whole array has been assessed on the first pass
+            - [3, 4, 2, 1] if the 3 is the pivot, on the first pass 1, and 2 will be swapped in front of 3 so that 4 is last [3, 2, 1, 4] we kept track that there are two items that are less than the pivot, so then we move the pivot [2, 1, 3, 4] then we assess the right side and sort that in the same manner. 
 
 Best case scenario for any sorting algorithm is time O(n log n) and space O(n)
