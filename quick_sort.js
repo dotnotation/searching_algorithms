@@ -8,6 +8,14 @@
 // - swap the starting element(the pivot) with the pivot index
 // - return the pivot index
 
-function pivot(arr, start, end){
+function pivot(arr, start = 0, end = arr.length + 1){
+    let pivot = arr[start]
+    let swapIdx = start 
 
+    for (let i = start + 1; i < arr.length; i++){
+        if (pivot > arr[i]){
+            swapIdx++
+            // keeping track of how many items are less than our pivot
+        }
+    }
 }
