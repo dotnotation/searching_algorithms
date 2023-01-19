@@ -94,5 +94,27 @@ Quick Sort:
         - there will be a variable that will store the number of elements that are less than the pivot which will gives us the index of where the pivot should be moved/swapped
             - keep in mind that the pivot isn't being swapped until the whole array has been assessed on the first pass
             - [3, 4, 2, 1] if the 3 is the pivot, on the first pass 1, and 2 will be swapped in front of 3 so that 4 is last [3, 2, 1, 4] we kept track that there are two items that are less than the pivot, so then we move the pivot [2, 1, 3, 4] then we assess the right side and sort that in the same manner. 
+    - Pivot helper aka partition 
+        - responsible for arranging element in an array on either side of the pivot
+        - given an array the helper should designate and element as the pivot
+        - then rearrange elements in the array so that all values less than the pivot are moved to the left of the pivot and all values greater than the pivot are moved to the right of the pivot
+        - the order of the elements on either side of the pivot doesn't matter
+        - should NOT create a new array aka do this in place
+            - mutating the data
+        - helper should return the INDEX of the pivot
+        - steps:
+            - accept three arguments (array, start index, and end index)
+                - these can default to 0 and to the array length - 1
+            - grab the pivot from the start of the array
+            - store the current pivot index in a variable
+                - this will keep track of where the pivot should end up
+            - loop through the array from the start until the end
+                - if the pivot is greater than the current element, increment the pivot index variable and then swap the current element with the element at the pivot index
+            - swap the starting element(the pivot) with the pivot index
+            - return the pivot index
+    - Picking the pivot
+        - the runtime of quick sort depends in part on how one selects the pivot
+        - ideally the pivot should be chosen so that it is roughly the median value in the data
+        - in the example we are going to always choose the pivot to be the first element (which does have some consequences)
 
 Best case scenario for any sorting algorithm is time O(n log n) and space O(n)
