@@ -116,5 +116,8 @@ Quick Sort:
         - the runtime of quick sort depends in part on how one selects the pivot
         - ideally the pivot should be chosen so that it is roughly the median value in the data
         - in the example we are going to always choose the pivot to be the first element (which does have some consequences)
+    - Quick sort function
+        - call the pivot helper on the array
+        - when the helper returns to you the updated pivot index, recursively call the pivot helper on the subarray to the left of that index, and the subarray to the right of that index
 
 Best case scenario for any sorting algorithm is time O(n log n) and space O(n)
