@@ -12,7 +12,7 @@ function pivot(arr, start = 0, end = arr.length + 1){
     const swap = (arr, idx1, idx2)=> {
         [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
     }
-    
+
     let pivot = arr[start]
     let swapIdx = start 
 
@@ -27,3 +27,10 @@ function pivot(arr, start = 0, end = arr.length + 1){
 
     return swapIdx
 }
+
+function quickSort(arr, left = 0, right = arr.length - 1){
+    let pivotIdx = pivot(arr, left, right)
+    // on the first run, this will run the whole array and in our example will return the index of 3
+}
+
+quickSort([4, 6, 9, 1, 2, 5, 3])
