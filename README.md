@@ -126,3 +126,21 @@ Quick Sort:
 Best case scenario for any sorting algorithm is time O(n log n) and space O(n)
 
 All of these are comparison sorting algorithms. At any point we are comparing no more than two values to each other. There isn't a way to get better time with these algorithms and there is a lower bound that we can't surpass. There is a limited amount of data that we can gather from comparing two values at a time.   
+
+Radix Sort:
+    - ISN'T a comparison sorting algorithm
+    - doesn't make direct comparisons between two elements
+    - integer sorting algorithm 
+    - special sorting algorithm that works on lists of numbers and is great for binary
+        - you can convert strings into binary as a way to work with this sort
+    - exploits the fact that information about the size of the number is encoded in the number of digits
+        - more digits means a bigger number
+    - you have buckets of single numbers 0-9 and you group numbers by the last digit in their number
+        - so 902 would be in bucket 2
+        - 86,  4386, 1556 would be in the 6 bucket
+        - then you sort the numbers by this bucket system
+        - then you repeat with the second to last digit
+            - if it is a single digit, they will go in the zero bucket
+            - any number that is out of numbers, go in the zero bucket on their respective turns
+        - repeat until numbers are sorted
+            - so if your largest number is 1367, then you will have to run the code 4 times as it is 4 digits long
