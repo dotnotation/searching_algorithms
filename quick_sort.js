@@ -29,8 +29,16 @@ function pivot(arr, start = 0, end = arr.length + 1){
 }
 
 function quickSort(arr, left = 0, right = arr.length - 1){
-    let pivotIdx = pivot(arr, left, right)
-    // on the first run, this will run the whole array and in our example will return the index of 3
+    if (left < right){
+        // if left and right pointer are equal, then it means that you have hit the end of the array
+        let pivotIdx = pivot(arr, left, right)
+        // on the first run, this will run the whole array and in our example will return the index of 3
+        //left
+        quickSort(arr, left, pivotIdx - 1)
+        // right
+        quickSort(arr, pivotIdx + 1, right)
+    }
+    return arr
 }
 
 quickSort([4, 6, 9, 1, 2, 5, 3])
