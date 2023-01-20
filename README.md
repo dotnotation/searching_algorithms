@@ -124,3 +124,5 @@ Quick Sort:
         - Space: O(log n)
 
 Best case scenario for any sorting algorithm is time O(n log n) and space O(n)
+
+All of these are comparison sorting algorithms. At any point we are comparing no more than two values to each other. There isn't a way to get better time with these algorithms and there is a lower bound that we can't surpass. There is a limited amount of data that we can gather from comparing two values at a time.   
