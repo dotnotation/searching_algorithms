@@ -119,5 +119,8 @@ Quick Sort:
     - Quick sort function
         - call the pivot helper on the array
         - when the helper returns to you the updated pivot index, recursively call the pivot helper on the subarray to the left of that index, and the subarray to the right of that index
+    - Big O
+        - Time: O(n log n)
+        - Space: O(log n)
 
 Best case scenario for any sorting algorithm is time O(n log n) and space O(n)
