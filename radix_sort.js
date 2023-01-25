@@ -8,4 +8,15 @@
 
 function getDigit(num, place){
     return Math.floor(Math.abs(num) / Math.pow(10, place)) % 10
+    // abs allows us to get the correct answer even with negative numbers
 }
+
+// second helper
+// figure out how many digits are in a number
+
+function digitCount(num){
+    
+}
+
+// third helper
+// uses digitCount to figure out the largest number
