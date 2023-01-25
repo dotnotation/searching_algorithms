@@ -59,6 +59,7 @@ function radixSort(nums){
         }
         nums = [].concat(...buckets)
     }
+    return nums
 }
 
 
