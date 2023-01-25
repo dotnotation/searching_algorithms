@@ -48,8 +48,17 @@ function mostDigits(nums){
 // concat into new array based on new order starting at 0 going up to 9
 // return list at the end
 
-function radixSort(arr){
-    
+function radixSort(nums){
+    let maxDigits = mostDigits(nums)
+    for (let k = 0; k < maxDigits; k++){
+        let buckets = Array.from({length: 10}, () => [])
+        // this gives us an array with 10 sub arrays
+        for (let i = 0; i < nums.length; i++){
+            let digit = getDigit(nums[i], k)
+            buckets[digit].push(nums[i])
+        }
+        nums = [].concat(...buckets)
+    }
 }
 
 
