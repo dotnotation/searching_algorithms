@@ -34,6 +34,23 @@ function mostDigits(nums){
     let maxDigits = 0
     for (let i = 0; i < nums.length; i++){
         maxDigits = Math.max(maxDigits, digitCount(nums[i]))
+        // .max takes in two numbers and returns the largest number
     }
     return maxDigits
 }
+
+// radixSort takes in an array of numbers
+// use mostDigits to find the amount of digits
+// loop from k = 0 up to largest number of digits
+// for each iteration of the loop
+    // create buckets for each digits (0 to 9)
+    // place each number in the corresponding bucket based on its kth digit
+// concat into new array based on new order starting at 0 going up to 9
+// return list at the end
+
+function radixSort(arr){
+    
+}
+
+
+
