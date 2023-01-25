@@ -144,3 +144,8 @@ Radix Sort:
             - any number that is out of numbers, go in the zero bucket on their respective turns
         - repeat until numbers are sorted
             - so if your largest number is 1367, then you will have to run the code 4 times as it is 4 digits long
+    - Big O
+        - Time: O(nk) aka O(n log n)
+        - Space: O(n + k)
+        - n = length of array
+        - k = number of digits

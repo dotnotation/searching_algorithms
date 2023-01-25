@@ -62,5 +62,11 @@ function radixSort(nums){
     return nums
 }
 
+// Big O
+    // Time O(nk)aka O(n log n)
+    // Space O(n + k)
+    // n = length of array
+    // k = number of digits
+
 
 
